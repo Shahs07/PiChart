@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Pi Chart Directive</title>
+</head>
+<body ng-app="pieChartApp">
+	<h1>Pi Chart Custom Directive</h1>
+	<div ng-controller="piechartCtrl as chartCtrl">
+		<button ng-click="chartCtrl.changeData()">Change Data</button>
+
+		<pie-chart
+         chart-data="chartCtrl.pieChartData"
+         chart-config="chartCtrl.pieChartConfig"
+         chart-option="chartCtrl.pieChartOptions">
+    </pie-chart>
+	</div>
+<script src="http://www.google.com/jsapi"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="googleService.js"></script>
+<script src="pieChart.js"></script>
+</body>
+</html>
